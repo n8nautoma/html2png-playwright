@@ -19,3 +19,6 @@ def render():
             page.screenshot(path=tmpfile.name)
             browser.close()
         return send_file(tmpfile.name, mimetype='image/png')
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=8000)
