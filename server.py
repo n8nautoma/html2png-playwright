@@ -5,10 +5,11 @@ import os
 
 app = Flask(__name__)
 
-@app.route('/render', methods=['POST'])
-
+@app.route('/')
 def index():
     return "Server is running"
+
+@app.route('/render', methods=['POST'])
 
 def render():
     html = request.json.get("html", "")
