@@ -6,6 +6,10 @@ import os
 app = Flask(__name__)
 
 @app.route('/render', methods=['POST'])
+
+def index():
+    return "Server is running"
+
 def render():
     html = request.json.get("html", "")
     width = request.json.get("width", 1080)
